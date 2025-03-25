@@ -1,11 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import ClockDisplay from './components/ClockDisplay'
-
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import ClockDisplay from "./components/ClockDisplay";
+import { ActivityFinder } from "./components/ActivityFinder";
+import RefCounter from "./components/Refcounter";
+import VideoPlayer from "./components/Videoplayer";
+import ReducerCounter from "./components/ReducerCounter";
+import PostListReducer from "./components/PostListReducer";
+import SubscribeForm from "./components/SubscribeForm";
+import { UserProvider } from "../context/UserContext";
+import LoginForm from "./components/LoginForm";
+import React from 'react'
+import TestComponent from './components/TestComponent'
+import CORSAnywhereDemo from './CORSAnywhere'
+import MyThemeProvider from "../context/ThemeContext";
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -18,7 +29,17 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <ClockDisplay/>
+      <MyThemeProvider/>
+      <TestComponent/>
+      <LoginForm/>
+      <UserProvider />
+      <SubscribeForm />
+      <PostListReducer />
+      <ReducerCounter />
+      <VideoPlayer />
+      <RefCounter />
+      <ActivityFinder />
+      <ClockDisplay />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -31,7 +52,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
