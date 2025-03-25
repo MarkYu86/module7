@@ -11,10 +11,12 @@ import PostListReducer from "./components/PostListReducer";
 import SubscribeForm from "./components/SubscribeForm";
 import { UserProvider } from "./context/UserContext";
 import LoginForm from "./components/LoginForm";
-import React from 'react'
-import TestComponent from './components/TestComponent'
-import CORSAnywhereDemo from './CORSAnywhere'
+import React from "react";
+import TestComponent from "./components/TestComponent";
+import CORSAnywhereDemo from "./CORSAnywhere";
 import MyThemeProvider from "./context/ThemeContext";
+import Smile from "./components/Emoji";
+import BitcoinRates from "./components/BitcoinRates";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -29,19 +31,21 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <MyThemeProvider/>
-      <TestComponent/>
       <UserProvider>
-      <LoginForm/>
+        <MyThemeProvider>
+          <Smile />
+          <BitcoinRates/>
+          <TestComponent />
+          <LoginForm />
+          <SubscribeForm />
+          <PostListReducer />
+          <ReducerCounter />
+          <VideoPlayer />
+          <RefCounter />
+          <ActivityFinder />
+          <ClockDisplay />
+        </MyThemeProvider>
       </UserProvider>
-      
-      <SubscribeForm />
-      <PostListReducer />
-      <ReducerCounter />
-      <VideoPlayer />
-      <RefCounter />
-      <ActivityFinder />
-      <ClockDisplay />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

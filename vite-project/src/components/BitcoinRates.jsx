@@ -5,6 +5,7 @@ const currencies = ["USD", "AUD", "NZD", "GBP", "EUR", "SGD"];
 function BitcoinRates() {
   const [currency, setCurrency] = useState(currencies[0]);
   const [price, setPrice] = useState(null);
+  const [emoji, setEmoji] = useState("🤣");
 
   useEffect(() => {
     console.log("running effect");
@@ -29,6 +30,17 @@ function BitcoinRates() {
     };
   }, [currency]);
 
+  const changeMood = () => {
+    if (emoji === "😂") {
+      setEmoji("🤣");
+    } else if (emoji === "🤣") {
+      setEmoji("🙃");
+    } else {
+      setEmoji("😂");
+    }
+  };
+
+
   const options = currencies.map((curr) => (
     <option value={curr} key={curr}>
       {curr}
@@ -43,6 +55,16 @@ function BitcoinRates() {
           {options}
         </select>
       </label>
+
+      <p>
+        Current Bitcoin Price in {currency}: {price ? price : "Loading..."}
+      </p>
+      {/* Displaying the current emoji */}
+      <div>
+        <span>{emoji}</span>
+        <button onClick={changeMood}>Change Mood</button>
+      </div>
     </div>
   );
 }
+export default BitcoinRates
