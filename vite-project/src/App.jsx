@@ -17,6 +17,9 @@ import CORSAnywhereDemo from "./CORSAnywhere";
 import MyThemeProvider from "./context/ThemeContext";
 import Smile from "./components/Emoji";
 import BitcoinRates from "./components/BitcoinRates";
+import AppRoutes from "./routes/AppRoutes";
+import NavBar from "./components/NavBar";
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -33,6 +36,8 @@ function App() {
       <h1>Vite + React</h1>
       <UserProvider>
         <MyThemeProvider>
+          <NavBar/>
+        <AppRoutes/>
           <Smile />
           <BitcoinRates/>
           <TestComponent />
