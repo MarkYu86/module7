@@ -1,6 +1,5 @@
 import React from "react";
-import BitcoinRates from "./BitcoinRates"; // Import BitcoinRates component
-
+import BitcoinRates from "../components/BitcoinRates";
 function BitcoinPage() {
   return (
     <div>
