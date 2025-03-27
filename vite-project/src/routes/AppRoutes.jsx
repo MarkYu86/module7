@@ -7,7 +7,7 @@ import DashboardPage, {
 } from "../pages/DashboardPage"; // Import DashboardPage
 import AboutPage from "../pages/AboutPage";
 import PageNotFound from "../pages/PageNotFound"; // Handle unmatched routes
-import ProtectedRoute from "./ProtectedRoute"; 
+import ProtectedRoute from "./ProtectedRoute";
 import LoginForm from "../components/LoginForm";
 import BitcoinPage from "../pages/BitcoinPage";
 import BitcoinRates from "../components/BitcoinRates";
@@ -18,7 +18,6 @@ function AppRoutes(props) {
       {/* Index route: default or home page */}
       <Route index element={<Homepage {...props} />} />
       {/* Nested routes under /dash */}
-      // update AppRoutes.jsx to protect the Dashboard
       <Route
         path="dash"
         element={
@@ -36,7 +35,7 @@ function AppRoutes(props) {
       {/* Special route to handle if none of the above match */}
       <Route path="*" element={<PageNotFound />} />
       {/* bitcoin route*/}
-      <Route path="/bitcoin" element={<BitcoinPage/>}/>
+      <Route path="/bitcoin" element={<BitcoinPage />} />
     </Routes>
   );
 }
