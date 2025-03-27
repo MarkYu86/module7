@@ -1,11 +1,13 @@
 import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { MyThemeContext } from '../context/ThemeContext';
+import AppBar from '@mui/material/AppBar';
 
 export default function NavBar() {
 const {theme} = useContext(MyThemeContext);
 
 return (
+    <AppBar>
 <nav className="NavBar"
 style={{backgroundColor: theme.background, color: theme.foreground}}>
 <ul className="menu">
@@ -16,5 +18,6 @@ style={{backgroundColor: theme.background, color: theme.foreground}}>
 <li><NavLink to="/about">About</NavLink></li>
 </ul> {/* ++ Add another page with route and component */}
 </nav>
+</AppBar>
 )
 }
