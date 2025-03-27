@@ -13,7 +13,7 @@ function BitcoinRates() {
     let ignore = false;
 
     fetch(
-      "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${currency}"
+      `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${currency}`
     )
       .then((response) => response.json())
       .then((json) => {

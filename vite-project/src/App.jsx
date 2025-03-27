@@ -19,6 +19,8 @@ import Smile from "./components/Emoji";
 import BitcoinRates from "./components/BitcoinRates";
 import AppRoutes from "./routes/AppRoutes";
 import NavBar from "./components/NavBar";
+import { ThemeProvider } from "@mui/material/styles";
+import { tealTheme } from "./components/tealTheme";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -35,21 +37,23 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <UserProvider>
-        <MyThemeProvider>
-          <NavBar/>
-        <AppRoutes/>
-          <Smile />
-          <BitcoinRates/>
-          <TestComponent />
-          <LoginForm />
-          <SubscribeForm />
-          <PostListReducer />
-          <ReducerCounter />
-          <VideoPlayer />
-          <RefCounter />
-          <ActivityFinder />
-          <ClockDisplay />
-        </MyThemeProvider>
+        <ThemeProvider theme={tealTheme}>
+          <MyThemeProvider>
+            <NavBar />
+            <AppRoutes />
+            <Smile />
+            <BitcoinRates />
+            <TestComponent />
+            <LoginForm />
+            <SubscribeForm />
+            <PostListReducer />
+            <ReducerCounter />
+            <VideoPlayer />
+            <RefCounter />
+            <ActivityFinder />
+            <ClockDisplay />
+          </MyThemeProvider>
+        </ThemeProvider>
       </UserProvider>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
