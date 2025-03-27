@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-           <NavBar />
+      <NavBar />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -39,12 +39,10 @@ function App() {
       <h1>Vite + React</h1>
       <UserProvider>
         <ThemeProvider theme={tealTheme}>
- 
           <MyThemeProvider>
-          <AppRoutes />
+            <AppRoutes />
             <Smile />
             <TestComponent />
-          
             <SubscribeForm />
             <PostListReducer />
             <ReducerCounter />
