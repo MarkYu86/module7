@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import App from '@/app/page';
+import App from '../app/page';
 
 const currencies = ['USD', 'AUD', 'NZD', 'GBP', 'EUR', 'SGD'];
 

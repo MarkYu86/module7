@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import App from '@/app/page';
+import App from '../app/page';
+
 export default function Login() {
   return (
     <>

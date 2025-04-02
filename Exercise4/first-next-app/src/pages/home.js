@@ -1,12 +1,10 @@
-import Link from 'next/link';
-import App from '@/app/page';
+
+// import App from '../src/app/page'
 export default function Home() {
     return (
-      <>
-      <App />
       <div>
+      {/* <App/> */}
         <h1>Home Page</h1>
       </div>
-      </>
     );
   }
